@@ -3,9 +3,11 @@ $(document).ready(function () {
 
 
     $(".saveBtn").on('click', function() {
-      var listItem = $(".description").val();
+      var listItem = $(this).siblings(".description").val();
       console.log(listItem);
-      window.localStorage.setItem("listItem");
+      var time = $(this).parent(".time-block").attr("id");
+      console.log(time);
+      localStorage.setItem(listItem, time);
     })
 
 
