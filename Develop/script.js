@@ -1,9 +1,11 @@
 $(document).ready(function () {
 
+
+
     $(".saveBtn").on('click', function() {
       var listItem = $(".description").val();
-      var time = $(".time-block").val();
-        window.localStorage.setItem(listItem, time);
+      console.log(listItem);
+      window.localStorage.setItem("listItem");
     })
 
 
